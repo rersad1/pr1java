@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.List;
 
+// класс для хранения массива данных о статье
+
 public class query {
     private List<searchItem> search;
 

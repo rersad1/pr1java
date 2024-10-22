@@ -6,7 +6,8 @@ public class Main {
         request req = new request();
         String url = req.createUrl();
         String response = req.searchResult(url);
-        searchPrint print = new searchPrint();
-        print.printResults(response);
+        userChoise print = new userChoise();
+        print.displayAndChooseArticle(response);
+
     }
 }

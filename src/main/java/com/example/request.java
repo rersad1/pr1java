@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 
 
 public class request { // класс для создания запроса
+
     public String createUrl() { // создание запроса
         System.out.println("Введите запрос для поиска");
         String query = System.console().readLine(); //  ввод запроса
@@ -31,13 +32,13 @@ public class request { // класс для создания запроса
             URI uri = new URI(url); // Создание URI вместо URL
             URL obj = uri.toURL(); 
             HttpURLConnection connection = (HttpURLConnection) obj.openConnection(); 
-            int responseCode = connection.getResponseCode();
+            int responseCode = connection.getResponseCode(); // получение ответа от сервера
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())); 
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())); // буфер для чтения ответа
                 String inputLine;
                 StringBuffer response = new StringBuffer();
 
-                while ((inputLine = in.readLine()) != null) {
+                while ((inputLine = in.readLine()) != null) { // чтение ответа
                     response.append(inputLine);
                 }
                 in.close();
@@ -50,7 +51,7 @@ public class request { // класс для создания запроса
             }              
         }
         catch (Exception e) {
-            System.out.println("Ошибка при создании URL");
+            System.out.println("Ошибка при создании URL"); // обработка ошибки
             return "";
         }
     }

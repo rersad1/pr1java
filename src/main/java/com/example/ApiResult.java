@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.List;
 
+// класс для хранения данных о запросе
+
 public class ApiResult {
     private query query;
 

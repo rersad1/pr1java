@@ -1,5 +1,7 @@
 package com.example;
 
+// класс для хранения данных о статье
+
 public class searchItem {
     private String title;
     private int pageid;

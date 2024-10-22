@@ -8,15 +8,17 @@ public class parsing {
 
     public void parse(String response) {
         Gson gson = new Gson();
-        ApiResult result = gson.fromJson(response, ApiResult.class);
-        if (result != null && result.getSearchResults() != null) {
+        ApiResult result = gson.fromJson(response, ApiResult.class); 
+        if (result != null && result.getSearchResults() != null) { // чтения результата поиска
             for (searchItem item : result.getSearchResults()) {
                 titleAndId.add(new String[] {item.getTitle(), String.valueOf(item.getPageid())});
             }
         } else {
-            System.out.println("No search results found.");
+            System.out.println("No search results found."); // если результат не найден
         }
     }
+
+// геттеры для работы с данными статьи
 
     public String getTitle(int index) {
         return titleAndId.get(index)[0];
