@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 
-public class request { // класс для создания запроса
+public class Request { // класс для создания запроса
 
     public String createUrl() { // создание запроса
         System.out.println("Введите запрос для поиска");

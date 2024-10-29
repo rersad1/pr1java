@@ -3,11 +3,12 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
-        request req = new request();
+        Request req = new Request();
         String url = req.createUrl();
         String response = req.searchResult(url);
-        userChoise print = new userChoise();
-        print.displayAndChooseArticle(response);
-
+        DisplayResults display = new DisplayResults();
+        display.displayArticles(response);
+        UserChoiсe choice = new UserChoiсe();
+        choice.chooseArticle(response);
     }
 }

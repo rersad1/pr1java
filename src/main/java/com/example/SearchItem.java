@@ -2,7 +2,7 @@ package com.example;
 
 // класс для хранения данных о статье
 
-public class searchItem {
+public class SearchItem {
     private String title;
     private int pageid;
 

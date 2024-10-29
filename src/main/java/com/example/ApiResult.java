@@ -5,17 +5,17 @@ import java.util.List;
 // класс для хранения данных о запросе
 
 public class ApiResult {
-    private query query;
+    private Query query;
 
-    public query getQuery() {
+    public Query getQuery() {
         return query;
     }
 
-    public void setQuery(query query) {
+    public void setQuery(Query query) {
         this.query = query;
     }
 
-    public List<searchItem> getSearchResults() {
+    public List<SearchItem> getSearchResults() {
         return query != null ? query.getSearch() : null;
     }
 }

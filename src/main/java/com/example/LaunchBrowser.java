@@ -3,7 +3,7 @@ package com.example;
 import java.awt.Desktop;
 import java.net.URI;
 
-public class lounchBrowser {
+public class LaunchBrowser {
 
     public void openBrowser(String url) { // функция открытия браузера
         try {
