@@ -8,7 +8,7 @@ public class Main {
         String response = req.searchResult(url);
         DisplayResults display = new DisplayResults();
         display.displayArticles(response);
-        UserChoiсe choice = new UserChoiсe();
+        UserChoice choice = new UserChoice();
         choice.chooseArticle(response);
     }
 }

@@ -10,15 +10,15 @@ public class Parsing {
         Gson gson = new Gson();
         ApiResult result = gson.fromJson(response, ApiResult.class);  // парсинг JSON
 
-        if (result.getQuery().getTotalhits() == 0) { // если результат не найден
-            System.out.println("По вашему запросу ничего не найдено.");
-            System.exit(0);                                   
-        } 
-
         if (result != null && result.getSearchResults() != null) { // чтения результата поиска
             for (SearchItem item : result.getSearchResults()) {
                 titleAndId.add(new String[] {item.getTitle(), String.valueOf(item.getPageid())}); // добавляем заголовок и id статьи
             }
+        }
+
+        if (titleAndId.isEmpty()) {
+            System.out.println("По вашему запросу ничего не найдено."); 
+            System.exit(0);  // если ничего не найдено
         }
     }
 
